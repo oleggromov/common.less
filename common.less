@@ -1,0 +1,93 @@
+.reset {
+	padding: 0;
+	margin: 0;
+}
+
+
+.font(@fz: 21px, @lh: 28px, @fw: normal) {
+	font: @fw @fz~'/'@lh 'PT Sans Narrow', sans-serif;
+}
+
+
+.clearfix-after() {
+	&:after {
+		display: table;
+		width: 100%;
+		height: 0;
+		visibility: hidden;
+		clear: both;
+		content: '';
+	}
+}
+
+.inline-block(@va: baseline) {
+	display: inline-block;
+	vertical-align: @va;
+}
+
+
+.border-box(@bxsz: border-box) {
+	-webkit-box-sizing: @bxsz;
+	-moz-box-sizing: @bxsz;
+	box-sizing: @bxsz;
+}
+
+
+.border-radius(@val) {
+	-webkit-border-radius: @val;
+	-moz-border-radius: @val;
+	border-radius: @val;
+}
+
+
+.transform(@arg) {
+	-webkit-transform: @arg;
+	-moz-transform: @arg;
+	-ms-transform: @arg;
+	-o-transform: @arg;
+	transform: @arg;
+}
+
+
+.transform-origin(@arg) {
+	-webkit-transform-origin: @arg;
+	-moz-transform-origin: @arg;
+	-ms-transform-origin: @arg;
+	-o-transform-origin: @arg;
+	transform-origin: @arg;
+}
+
+
+.transition(@args) {
+	-webkit-transition: @args;
+	-moz-transition: @args;
+	-ms-transition: @args;
+	-o-transition: @args;
+	transition: @args;
+}
+
+.box-shadow(@p) {
+	-webkit-box-shadow: @arguments;
+	-moz-box-shadow: @arguments;
+	box-shadow: @arguments;
+}
+
+
+.gradient(@colorFrom, @colorTo, @direction) {
+	background: @colorFrom;
+	background-image: -webkit-linear-gradient(@direction, @colorFrom, @colorTo);
+	background-image: -moz-linear-gradient(@direction, @colorFrom, @colorTo);
+	background-image: -o-linear-gradient(@direction, @colorFrom, @colorTo);
+	background-image: -ms-linear-gradient(@direction, @colorFrom, @colorTo);
+	background-image: linear-gradient(@direction, @colorFrom, @colorTo);
+}
+
+
+.gradient-radial(@colorFrom, @colorTo, @size: closest-corner, @pos: center, @shape: ellipse) {
+	background: @colorFrom;
+	background-image: -webkit-radial-gradient(@pos, @shape @size, @colorFrom 0%, @colorTo 100%);
+	background-image: -moz-radial-gradient(@pos, @shape @size, @colorFrom 0%, @colorTo 100%);
+	background-image: -o-radial-gradient(@pos, @shape @size, @colorFrom 0%, @colorTo 100%);
+	background-image: -ms-radial-gradient(@pos, @shape @size, @colorFrom 0%, @colorTo 100%);
+	background-image: radial-gradient(@shape @size at @pos, @colorFrom 0%, @colorTo 100%);
+}
