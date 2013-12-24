@@ -3,9 +3,11 @@
 	margin: 0;
 }
 
-
-.font(@fz: 21px, @lh: 28px, @fw: normal) {
-	font: @fw @fz~'/'@lh 'PT Sans Narrow', sans-serif;
+// 
+// @Font, @FontSize and @FontLine should be defined before usage.
+// 
+.font(@fz: @FontSize, @lh: @FontLine, @fw: normal) {
+	font: @fw @fz~'/'@lh @Font;
 }
 
 

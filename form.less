@@ -1,0 +1,85 @@
+.form {
+	.reset;
+
+	&_compact {
+
+	}
+}
+
+.form__line {
+	clear: both;
+	padding-left: 150px;
+	margin: 5px 0 10px;
+	.clearfix-after();
+
+	&:first-child {
+		margin-top: 0;
+	}
+	
+	.form_compact & {
+		padding-left: 0;
+	}
+
+	&_buttons {
+		margin-top: 20px;
+		margin-bottom: 0;
+		padding-left: 0;
+	}
+
+	&_checkbox {
+		position: relative;
+		padding-left: 22px;
+
+		.form_compact & {
+			padding-left: 22px;			
+		}
+	}
+}
+
+
+.form__label {
+	float: left;
+	width: 150px;
+	margin: 7px 0 0 -150px;
+
+	.form_compact & {
+		display: block;
+		float: none;
+		width: auto;
+		margin: 0;
+		.font(18px);
+	}
+
+	.form__line_checkbox & {
+		.font(18px, 1.2);
+		display: block;
+		float: none;
+		margin: 0;
+		width: auto;
+	}
+}
+
+
+.form__text {
+	.reset;
+	width: 100%;
+	.border-box;
+	padding: 2px 4px;
+	color: black;	
+	border: 2px inset #efefef;
+	resize: none;
+}
+
+
+.form__checkbox {
+	.form__line_checkbox & {
+		position: absolute;
+		left: 0;
+		top: 2px;
+
+		.form_compact & {
+			left: 0;
+			top: 4px;
+		}
+	}
+}
