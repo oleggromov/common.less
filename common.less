@@ -6,8 +6,8 @@
 // 
 // @Font, @FontSize and @FontLine should be defined before usage.
 // 
-.font(@fz: @FontSize, @lh: @FontLine, @fw: normal) {
-	font: @fw @fz~'/'@lh @Font;
+.font(@fz: @FontSize, @lh: @FontLine, @fw: normal, @ff: @Font) {
+	font: @fw @fz~'/'@lh @ff;
 }
 
 
@@ -72,6 +72,13 @@
 	-webkit-box-shadow: @arguments;
 	-moz-box-shadow: @arguments;
 	box-shadow: @arguments;
+}
+
+
+.background-b64(@str, @type: png) {
+	background-image: url("data:image/@{type};base64,@{str}");
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 
